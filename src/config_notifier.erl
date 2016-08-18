@@ -56,7 +56,7 @@ handle_call(_Request, St) ->
 handle_info(_Info, St) ->
     {ok, St}.
 
-terminate(Reason, {Subscriber, Subscription}) ->
+terminate(_Reason, {_Subscriber, _Subscription}) ->
     ok.
 
 code_change(_OldVsn, St, _Extra) ->

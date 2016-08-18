@@ -561,7 +561,7 @@ should_not_notify(Subscription, Pid) ->
         ok
     end)}.
 
-should_unsubscribe_when_subscriber_gone(Subscription, Pid) ->
+should_unsubscribe_when_subscriber_gone(_Subscription, Pid) ->
     ?_test(begin
         ?assertEqual(1, n_notifiers()),
 
