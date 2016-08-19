@@ -19,8 +19,6 @@
 -export([subscribe/1]).
 -export([subscribe/2]).
 
--export([behaviour_info/1]).
-
 %% gen_event interface
 -export([
     init/1,
@@ -30,12 +28,6 @@
     terminate/2,
     code_change/3
 ]).
-
-behaviour_info(callbacks) ->
-    [{handle_config_change,5},
-     {handle_config_terminate, 3}];
-behaviour_info(_) ->
-    undefined.
 
 subscribe(Subscription) ->
     subscribe(self(), Subscription).
